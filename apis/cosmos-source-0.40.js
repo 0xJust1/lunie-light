@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js'
 import { keyBy, orderBy, take, reverse, sortBy, chunk } from 'lodash'
-import * as reducers from './cosmos-reducers'
+import * as reducers from './cosmos-reducers-0.39'
 import { encodeB32, decodeB32, pubkeyToAddress } from '~/common/address'
 import { setDecimalLength } from '~/common/numbers'
 import network from '~/common/network'
@@ -47,10 +47,17 @@ export default class CosmosAPI {
   }
 
   async getAccountInfo(address) {
-    const accountInfo = await this.query(`/auth/accounts/${address}`)
+    const result = await this.query(`/auth/accounts/${address}`)
+    let accountInfo
+    if (result.type === 'cosmos-sdk/DelayedVestingAccount') {
+      const vestingAccountType = Object.keys(result.value)[0]
+      accountInfo = result.value[vestingAccountType].BaseAccount
+    } else {
+      accountInfo = result.value
+    }
     return {
-      accountNumber: accountInfo.value.account_number,
-      sequence: accountInfo.value.sequence || '0',
+      accountNumber: accountInfo.account_number,
+      sequence: accountInfo.sequence || '0',
     }
   }
 
@@ -173,7 +180,7 @@ export default class CosmosAPI {
         this.query(`staking/validators?status=BOND_STATUS_BONDED`),
         this.query(`staking/validators?status=BOND_STATUS_UNBONDED`),
       ]).then((validatorGroups) => [].concat(...validatorGroups)),
-      this.getAnnualProvision().catch(() => undefined),
+      this.getAnnualProvision(),
       this.getValidatorSet(height),
       this.getSignedBlockWindow(),
     ])
@@ -527,7 +534,7 @@ export default class CosmosAPI {
       .map((delegation) =>
         this.reducers.delegationReducer(
           delegation,
-          this.validators[delegation.delegation.validator_address],
+          this.validators[delegation.validator_address],
           delegationEnum.ACTIVE
         )
       )
