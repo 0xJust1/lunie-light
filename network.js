@@ -18,7 +18,7 @@ export default {
   ],
   addressPrefix: 'desmos',
   validatorAddressPrefix: 'desmosvaloper',
-  validatorConsensusaddressPrefix: 'desmosavalcons', // needed to map validators from staking queries to the validator set
+  validatorConsensusaddressPrefix: 'desmosvalcons', // needed to map validators from staking queries to the validator set
   HDPath: `m/44'/118'/0'/0/0`,
   lockUpPeriod: `14 days`,
   fees: {
