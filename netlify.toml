@@ -6,7 +6,7 @@
   [headers.values]
     Content-Security-Policy = '''
       default-src 'self' https://*.netlify.app;
-      connect-src 'self' data: https://t7qxrf.deta.dev;
+      connect-src 'self' data: https://t7qxrf.deta.dev https://keybase.io;
       img-src 'self' data: https://*.netlify.app https://s3.amazonaws.com;
       script-src 'self' 'unsafe-eval' 'unsafe-inline' https://*.netlify.app;
       style-src 'self' 'unsafe-inline' https://*.netlify.app;
