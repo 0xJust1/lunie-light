@@ -1,5 +1,5 @@
 <template>
-  <div class="notification-container">
+/**  <div class="notification-container">
     <Bar
       v-for="notification in notifications.notifications"
       :key="notification.id"
@@ -8,7 +8,7 @@
     >
       {{ notification.message }}
     </Bar>
-  </div>
+ */ </div>
 </template>
 
 <script>
