@@ -1,32 +1,32 @@
 export default {
-  id: 'aura-testnet', // DEPRECATE, only used for Lunie extension, NOT CHAIN ID
+  id: 'desmos-mainnet', // DEPRECATE, only used for Lunie extension, NOT CHAIN ID
   name: 'Aura',
   description:
     'Cosmos is a network of independent parallel blockchains, powered by BFT consensus algorithms like Tendermint.',
   logo: `logo.svg`,
-  website: 'https://aura.network',
-  apiURL: 'https://rpc-testnet.aura.network', // use `npx lcp --proxyUrl http://34.123.30.100:1317`
-  rpcURL: 'https://tendermint-testnet.aura.network',
-  stakingDenom: 'AURA',
+  website: 'https://desmos.network',
+  apiURL: 'https://t7qxrf.deta.dev', // use `npx lcp --proxyUrl http://34.123.30.100:1317`
+  rpcURL: 'https://rpc.mainnet.desmos.network',
+  stakingDenom: 'DSM',
   coinLookup: [
     {
-      viewDenom: 'AURA',
-      chainDenom: 'uaura',
+      viewDenom: 'DSM',
+      chainDenom: 'udsm',
       chainToViewConversionFactor: 1e-6,
       icon: `currencies/muon.png`,
     },
   ],
-  addressPrefix: 'aura',
-  validatorAddressPrefix: 'auravaloper',
-  validatorConsensusaddressPrefix: 'auravalcons', // needed to map validators from staking queries to the validator set
+  addressPrefix: 'desmos',
+  validatorAddressPrefix: 'desmosvaloper',
+  validatorConsensusaddressPrefix: 'desmosavalcons', // needed to map validators from staking queries to the validator set
   HDPath: `m/44'/118'/0'/0/0`,
-  lockUpPeriod: `3 days`,
+  lockUpPeriod: `14 days`,
   fees: {
     default: {
       gasEstimate: 80000,
       feeOptions: [
         {
-          denom: 'AURA',
+          denom: 'DSM',
           amount: 0.001,
         },
       ],
