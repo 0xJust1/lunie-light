@@ -8,7 +8,7 @@
     >
       {{ notification.message }}
     </Bar>
- */ </div>
+ </div>  */
 </template>
 
 <script>
