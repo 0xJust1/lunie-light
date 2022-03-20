@@ -1,14 +1,14 @@
 <template>
 /**  <div class="notification-container">
-    <Bar
-      v-for="notification in notifications.notifications"
-      :key="notification.id"
-      :bar-type="notification.type"
-      @close="$store.commit('notifications/remove', notification.id)"
-    >
-      {{ notification.message }}
-    </Bar>
- </div>  */
+    *<Bar
+     * v-for="notification in notifications.notifications"
+      *:key="notification.id"
+      *:bar-type="notification.type"
+    *  @close="$store.commit('notifications/remove', notification.id)"
+   * >
+  *    {{ notification.message }}
+ *   </Bar>
+* </div>  */
 </template>
 
 <script>
