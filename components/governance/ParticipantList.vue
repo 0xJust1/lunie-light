@@ -24,7 +24,7 @@
           </span>
         </div>
         <template v-if="participant.votingPower">
-          <div v-if="network.network_type === `cosmos`">
+          <div v-if="network.network_type === `desmos`">
             {{ participant.votingPower | bigFigureOrPercent }}
           </div>
           <div v-else>
