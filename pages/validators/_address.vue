@@ -156,10 +156,13 @@ export default {
     noBlanks,
     fromNow,
   },
-  data: () => ({
+  
+/**  data: () => ({
     selfStake: undefined,
     validatorDelegations: [],
   }),
+  */
+  
   computed: {
     ...mapState('data', [
       'validators',
