@@ -1,8 +1,8 @@
 export default {
   id: 'desmos-mainnet', // DEPRECATE, only used for Lunie extension, NOT CHAIN ID
-  name: 'Aura',
+  name: 'Desmos',
   description:
-    'Cosmos is a network of independent parallel blockchains, powered by BFT consensus algorithms like Tendermint.',
+    'A blockchain which serves as the backbone to empower the development of user-centric social networks.',
   logo: `logo.svg`,
   website: 'https://desmos.network',
   apiURL: 'https://t7qxrf.deta.dev', // use `npx lcp --proxyUrl http://34.123.30.100:1317`
@@ -23,7 +23,7 @@ export default {
   lockUpPeriod: `14 days`,
   fees: {
     default: {
-      gasEstimate: 80000,
+      gasEstimate: 20000,
       feeOptions: [
         {
           denom: 'DSM',
@@ -32,7 +32,7 @@ export default {
       ],
     },
   },
-  icon: `https://lunie.fra1.digitaloceanspaces.com/network-icons/cosmos.png`,
+  icon: `https://letsrunsomefuckingnode.com/assets/images/desmos.png`,
 
   // This is only to be used as a developer tool and for testing purposes
   // NEVER ENABLE LOCALSIGNING IN PRODUCTION OR FOR MAINNETS
