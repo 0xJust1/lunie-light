@@ -11,7 +11,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'Lunie 3',
+    title: 'Desmos - LetsRunSomeFuckingNode',
     htmlAttrs: {
       lang: 'en',
     },
