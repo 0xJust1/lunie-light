@@ -22,7 +22,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Lunie 3 is a simple staking and governance interface for proof-of-stake blockchains',
+          'Dahsboard to stake, unstake, claim your DSM',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
