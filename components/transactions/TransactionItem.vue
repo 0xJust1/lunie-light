@@ -2,7 +2,7 @@
   <div class="tx-container">
     <a
       class="transaction"
-      :href="!'https://www.mintscan.io/desmos' + '/txs/' + transaction.hash"
+      :href="'https://www.mintscan.io/desmos' + '/txs/' + transaction.hash"
       target="_blank"
       rel="nofollow noreferrer noopener"
     >
